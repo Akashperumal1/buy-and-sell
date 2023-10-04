@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Selling</title>
+    <link rel="stylesheet" href="../css/sell.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+            <img src="../images/logo.png" alt="Logo">
+        </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../containers/nav.html">Home</a></li>
+                <li class="category">
+                    <a href="#">Categories</a>
+                    <ul class="sub-menu">
+                        <li><a href="../containers/mobile.html">Mobile Phone</a></li>
+                        <li><a href="../containers/laptop.html">Laptop</a></li>
+                    </ul>
+                </li>
+                <li><a href="../containers/sell.html">Sell</a></li>
+                <li><a href="../containers/cart.html">Cart</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <div class="container">
+        <h1>Sell a Product</h1>
+        <form id="product-form">
+            <label for="image">Product Image URL:</label>
+            <input type="text" id="image" name="image" required>
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="price">Product Price:</label>
+            <input type="text" id="price" name="price" required>
+            <button type="submit">Sell</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const productForm = document.getElementById('product-form');
+
+    productForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get input values
+        const image = document.getElementById('image').value;
+        const name = document.getElementById('name').value;
+        const price = document.getElementById('price').value;
+
+        // Create a new product object
+        const product = {
+            image: image,
+            name: name,
+            price: price,
+        };
+
+        // Save the product data to localStorage
+        let products = JSON.parse(localStorage.getItem('products')) || [];
+        products.push(product);
+        localStorage.setItem('products', JSON.stringify(products));
+
+        // Reset the form
+        productForm.reset();
+
+        // Redirect to category.html
+        window.location.href = '../containers/save.html';
+    });
+});
+
+    </script>
+</body>
+</html>

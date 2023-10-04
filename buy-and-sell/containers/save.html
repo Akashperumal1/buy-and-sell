@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Products</title>
+    <link rel="stylesheet" href="../css/save.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../containers/nav.html">Home</a></li>
+                <li class="category">
+                    <a href="#">Categories</a>
+                    <ul class="sub-menu">
+                        <li><a href="../containers/mobile.html">Mobile Phone</a></li>
+                        <li><a href="../containers/laptop.html">Laptop</a></li>
+                    </ul>
+                </li>
+                <li><a href="../containers/sell.html">Sell</a></li>
+                <li><a href="../containers/cart.html">Cart</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Saved Products</h1>
+        <ul id="product-list"></ul>
+    </div>
+
+    <script src="display.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const productList = document.getElementById('product-list');
+
+            // Get saved products from localStorage
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+
+            // Display saved products
+            products.forEach(function (product, index) {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div>
+                        <p>Name: ${product.name}</p>
+                        <p>Price: ${product.price}</p>
+                        <button class="remove-button" data-index="${index}">Remove</button>
+                    </div>
+                `;
+                productList.appendChild(listItem);
+            });
+
+            // Add event listener for remove buttons
+            const removeButtons = document.querySelectorAll('.remove-button');
+            removeButtons.forEach((button) => {
+                button.addEventListener('click', removeProduct);
+            });
+
+            // Function to remove a product
+            function removeProduct(event) {
+                const username = prompt('Enter your username:');
+                const password = prompt('Enter your password:');
+
+                // Check if username and password are correct (replace with your validation logic)
+                if (username === 'User' && password === '12345') {
+                    const indexToRemove = event.target.getAttribute('data-index');
+
+                    // Remove the product from the products array
+                    products.splice(indexToRemove, 1);
+
+                    // Update localStorage with the modified products array
+                    localStorage.setItem('products', JSON.stringify(products));
+
+                    // Remove the corresponding list item from the DOM
+                    event.target.parentNode.parentNode.remove();
+                } else {
+                    alert('Invalid username or password. Product not removed.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

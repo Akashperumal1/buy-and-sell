@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Logo">
+            </a>        </div>
+        <nav>
+            <ul>
+                <li><a href="../containers/nav.html">Home</a></li>
+                <li class="category">
+                    <a href="../containers/sell.html">Categories</a>
+                    <ul class="sub-menu">
+                        <li><a href="../containers/mobile.html">Mobile Phone</a></li>
+                        <li><a href="../containers/laptop.html">Laptop</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="../containers/cart.html">Cart</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Repeat the following card structure 10 times -->
+        <div class="card">
+        <div class="image">
+            <img src="../images/l1.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">Acer Aspire 3 A315-510P</h2>
+            <p class="model">Windows 11</p>
+            <p class="price">$2399.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="Acer Aspire 3 A315-510P"
+                    data-model="Windows 11"
+                    data-price="$2399.99"
+                    data-image-url="../images/l1.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../images/4.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">Acer Swift X Laptop </h2>
+            <p class="model">Windows 11</p>
+            <p class="price">$2399.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="Acer Swift X Laptop "
+                    data-model="Windows 11"
+                    data-price="$2399.99"
+                    data-image-url="../images/4.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div><div class="card">
+        <div class="image">
+            <img src="../images/2.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">Lenovo Ideapad Slim 3 </h2>
+            <p class="model">Windows 11</p>
+            <p class="price">$2399.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="Lenovo Ideapad Slim 3 "
+                    data-model="Windows 11"
+                    data-price="$2399.99"
+                    data-image-url="../images/2.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div><div class="card">
+        <div class="image">
+            <img src="../images/3.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">HP 15s-eq2144AU </h2>
+            <p class="model">Windows 11</p>
+            <p class="price">$2399.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="HP 15s-eq2144AU "
+                    data-model="Windows 11"
+                    data-price="$2399.99"
+                    data-image-url="../images/3.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div>
+        <!-- Repeat the card structure 10 times -->
+    </div>
+
+    <script src="../js/category.js"></script>
+</body>
+</html>

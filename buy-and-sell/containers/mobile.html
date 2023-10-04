@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Logo">
+            </a>        </div>
+        <nav>
+            <ul>
+                <li><a href="../containers/nav.html">Home</a></li>
+                <li class="category">
+                    <a href="#">Categories</a>
+                    <ul class="sub-menu">
+                        <li><a href="../containers/mobile.html">Mobile Phone</a></li>
+                        <li><a href="../containers/laptop.html">Laptop</a></li>
+                    </ul>
+                </li>
+                <li><a href="../containers/sell.html">Sell</a></li>
+                <li><a href="../containers/cart.html">Cart</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+<div class="container">
+    <!-- Repeat the following card structure 10 times -->
+    <div class="card">
+        <div class="image">
+            <img src="../images/mobile/1.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">Honor 90</h2>
+            <p class="model">Android v13</p>
+            <p class="price">$2399.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="Honor 90"
+                    data-model="Android v13"
+                    data-price="$2399.99"
+                    data-image-url="../images/mobile/1.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../images/mobile/2.png" alt="Product Image" data-image-url="product2.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">Xiaomi Redmi 12 5G</h2>
+            <p class="model">Android v13</p>
+            <p class="price">$9245.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="Xiaomi Redmi 12 5G"
+                    data-model="Android v13"
+                    data-price="$9245.99"
+                    data-image-url="../images/mobile/2.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div> <div class="card">
+        <div class="image">
+            <img src="../images/mobile/3.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">vivo T2 Pro</h2>
+            <p class="model">Android v13</p>
+            <p class="price">$12949.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="vivo T2 Pro"
+                    data-model="Android v13"
+                    data-price="$1249.99"
+                    data-image-url="../images/mobile/3.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    </div> <div class="card">
+        <div class="image">
+            <img src="../images/mobile/4.png" alt="Product Image" data-image-url="product1.jpg">
+        </div>
+        <div class="info">
+            <h2 class="name">iQOO Z7 Pro</h2>
+            <p class="model">Android v13</p>
+            <p class="price">$9339.99</p>
+            <!-- Add data attributes to store item information -->
+            <button class="cart-button"
+                    data-name="iQOO Z7 Pro"
+                    data-model="Android v13"
+                    data-price="$9339.99"
+                    data-image-url="../images/mobile/4.png">Add to Cart</button>
+            <span class="heart-icon">&#x2661;</span>
+        </div>
+    
+    <!-- Repeat the card structure 10 times -->
+</div>
+
+       
+
+    <script src="../js/category.js"></script>
+</body>
+</html>

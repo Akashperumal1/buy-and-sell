@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Logo">
+            </a>        </div>
+        <nav>
+            <ul>
+                <li><a href="../containers/nav.html">Home</a></li>
+                <li class="category">
+                    <a href="#">Categories</a>
+                    <ul class="sub-menu">
+                        <li><a href="../containers/mobile.html">Mobile Phone</a></li>
+                        <li><a href="../containers/laptop.html">Laptop</a></li>
+                    </ul>
+                </li>
+                <li><a href="../containers/sell.html">Sell</a></li>
+                <li><a href="../containers/cart.html">Cart</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Cart Items</h1>
+    <ul id="cart-list"></ul>
+    <div id="total-price"></div>
+    <button id="buy-button">Buy</button>
+    
+    <script src="../js/cart.js"></script>
+</body>
+</html>
